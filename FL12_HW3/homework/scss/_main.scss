@@ -12,7 +12,7 @@
 @mixin link($font, $textColor) {
     font-family: $font;
     color: $textColor;
-    font-weight: 550;
+    font-weight: 500;
 }
 
 @mixin logo {
