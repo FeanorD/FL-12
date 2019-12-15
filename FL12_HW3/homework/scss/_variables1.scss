@@ -1,0 +1,13 @@
+$fontHeading: 'Source Sans Pro', sans-serif;
+$fontContent: 'Hind', sans-serif;
+$headingColor: #2c2f3c;
+$blockTextColor: #fff;
+$highlightColor: #14a0c7;
+$backgroundColors: (
+    "block": #21232e,
+    "main": #fff,
+    "button": #699900
+);
+$gradientFirst: map-get($backgroundColors, button);
+$gradientSecond: #2b59de;
+$imgHeader: url('../img/m-h-day.jpg');

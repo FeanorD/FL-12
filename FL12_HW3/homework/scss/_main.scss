@@ -1,0 +1,259 @@
+@mixin button($background, $textColor, $font) {
+    background: $background;
+    color: $textColor;
+    font-family: $font;
+    font-weight: bolder;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@mixin link($font, $textColor) {
+    font-family: $font;
+    color: $textColor;
+    font-weight: 550;
+}
+
+@mixin logo {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 35px;
+        height: auto;
+    }
+    p {
+        display: inline-block;
+        margin: 0;
+        padding: 3px 11px;
+        font-size: 19px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 0.9em;
+
+        span {
+            display: block;
+            font-size: 8px;
+        }
+    }
+}
+
+@mixin afterWordBG($width, $left: auto, $right: auto) {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: $width;
+        height: 40px;
+        z-index: -1;
+        bottom: 0;
+        left: $left;
+        right: $right;
+        background: $highlightColor;
+    }
+}
+
+%basicFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: $fontContent;
+    background: map-get($backgroundColors, main);
+}
+button {
+    @include button(map-get($backgroundColors, button), $blockTextColor, $fontHeading);
+}
+a {
+    @include link($fontHeading, $blockTextColor);
+}
+div,
+header,
+footer,
+main {
+    box-sizing: border-box;
+}
+header {
+    padding: 152px;
+    padding-top: 15px;
+    background: $imgHeader no-repeat center / cover;
+    height: 570px;
+    border-radius: 0 0 40%;
+    color: $headingColor;
+
+    .header-wrap {
+        @extend %basicFlex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 43%;
+        height: 100%;
+    }
+
+    .header_heading {
+        font-size: 57px;
+        font-family: $fontHeading;
+        line-height: 1em;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 55px;
+
+        @include afterWordBG(240px, 0);
+    }
+
+    .header_text {
+        font-size: 13px;
+        font-weight: 100;
+        white-space: pre-line;
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+
+    .landing-logo {
+        @include logo();
+    }
+
+    a {
+        padding: 0 117px;
+    }
+}
+main {
+    background: map-get($backgroundColors, main);
+    position: relative;
+    padding-bottom: 160px;;   
+
+    .section_text {
+        text-align: center;
+        font-family: $fontHeading;
+        font-weight: 600;
+        font-size: 33px;
+        color: $headingColor;
+        margin: 34px;
+        line-height: 0.9em;
+
+        @include afterWordBG(150px, $right: 571px);
+    }
+    .section_card {
+        @extend %basicFlex;
+        align-items: stretch;
+        background: map-get($backgroundColors, block);
+        color: $blockTextColor;
+        padding: 15px;
+        width: 58%;
+        margin: 20px auto;
+        border-radius: 5px;
+        min-height: 255px;
+
+
+        img {
+            min-width: 40%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .section_card_right_container {
+            @extend %basicFlex;
+            flex-direction: column;
+            padding: 0 70px;
+            text-align: justify;
+        }
+
+        .section_link {
+            font-family: $fontContent;
+            color: darken($blockTextColor, 25%);
+            font-size: 13px;
+        }
+    }
+    .section_card:nth-child(2) {
+        img {
+            min-width: 39%;
+        }
+    }
+    .section_card:last-child {
+        img {
+            min-width: 42%;
+        }
+    }
+
+    .section_card_heading {
+        font-family: $fontHeading;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .section_card_text {
+        font-size: 13px;
+        color: darken($blockTextColor, 25%);
+        line-height: 1.5em;
+    }
+
+    .section_banner {
+        @extend %basicFlex;
+        position: absolute;
+        width: 948px;
+        bottom: -115px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(45deg, $gradientFirst, $gradientSecond);
+        border-radius: 5px;
+        padding: 25px 130px;
+        justify-content: space-between;
+
+        .section_banner_heading {
+            font-family: $fontHeading;
+            font-weight: 700;
+            font-size: 24px;
+            color: $headingColor;
+            line-height: 1em;
+            margin-top: 0;
+            margin-bottom: 20px;
+
+            @include afterWordBG(51px, 96px)
+        }
+
+        .section_banner_text {
+            font-family: $fontContent;
+            font-size: 12px;
+            color: darken($blockTextColor, 25%);
+            margin-bottom: 0;
+        }
+
+    }
+}
+footer {
+    background: map-get($backgroundColors, block);
+    color: darken($blockTextColor, 25%);
+    font-family: $fontContent;
+    padding: 0 111px;
+    padding-top: 40px;
+
+    .footer-wrap {
+        @extend %basicFlex;
+        justify-content: space-between;
+
+        .footer_logo {
+            @include logo;
+        }
+
+        .footer_text {
+            font-size: 11px;
+            width: 240px;
+        }
+
+        .footer-cr {
+            font-size: 13px;
+        }
+    }
+
+    .footer-wrap > * {
+        padding: 40px;
+        
+    }
+}

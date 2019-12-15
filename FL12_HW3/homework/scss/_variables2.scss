@@ -1,0 +1,13 @@
+$fontHeading: 'Source Sans Pro', sans-serif;
+$fontContent: 'Fresca', sans-serif;
+$headingColor: #fff;
+$blockTextColor: #fff;
+$highlightColor: #ff4e33;
+$backgroundColors: (
+    "block": #3b3f50,
+    "main": #21232e,
+    "button": #e3ac00
+);
+$gradientFirst: map-get($backgroundColors, button);
+$gradientSecond: #922b54;
+$imgHeader: url('../img/m-h-night.jpg');
