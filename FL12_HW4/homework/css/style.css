@@ -9,6 +9,9 @@ body {
 header {
     min-height: 100vh;
 }
+main {
+    padding: 110px 310px;
+}
 nav a {
     padding: 5px;
     margin-left: 30px;
@@ -22,9 +25,8 @@ nav a:hover {
 }
 .menu {
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: space-between;
-    /* min-height: 11vh; */
     height: 11vh;
     padding: 30px 220px;
     color: #555555;
@@ -48,8 +50,12 @@ nav a:hover {
     height: 100vh;
     margin-top: 11vh;
 }
+.hero-bgcolor {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 .hero-wrap {
-    /* margin-top: 40%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,35 +73,104 @@ nav a:hover {
     color: #cdba55;
     letter-spacing: 0.1em;
 }
-.discover-button {
+.button {
     margin-top: 30px;
-    border: 0;
     background: #fff;
     border-radius: 30px;
     padding: 12px 23px;
-    font-size: 0.6em;
-    text-transform: uppercase;
     font-weight: 700;
+    color: #555555;
+}
+.discover-button {
+    border: 0;
+    text-transform: uppercase;
+    font-size: 0.6em;
     letter-spacing: 0.2em;
 }
 
+.art {
+    padding: 75px 0 55px 0;
+}
+.art:first-child {
+    padding-top: 0;
+}
+.art:last-child {
+    padding-bottom: 0;
+}
+.art-img {
+    max-width: 100%;
+}
+.art-heading {
+    font-size: 1.6em;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+.art p {
+    font-size: 0.86em;
+    color: #555555;
+}
+.art-info {
+    display: flex;
+    justify-content: start;
+    padding: 10px 0;
+    height: 60px;
+}
+.art-info p {
+    padding: 0 10px;
+    line-height: 0.9em;
+}
+.art-profile-img {
+    border-radius: 50%;
+    max-width: 40px;
+}
+.art-button {
+    border: 1px solid #cfcfcf;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+.art-text {
+    margin-bottom: 0;
+}
 
 footer {
     display: flex;
     /* justify-content: center; */
     justify-content: space-between;
-    padding: 100px 300px;
+    padding: 100px 310px;
     width: 100%;
     background: #000;
 }
-.footer-container {
+.footer-info {
+    flex: 1.25;
+    margin-right: 14%;
+}
+.footer-contact {
     flex: 1;
 }
 .footer-heading {
     color: #fff;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 footer p {
     color: #555555;
+    font-size: 0.86em;
+}
+
+@media (max-width: 1200px) {
+    main, footer {
+        padding: 60px 160px;
+    }
+    .menu {
+        padding: 30px 120px;
+    }
+    .hero-heading {
+        font-size: 3em;
+    }
+    footer p {
+       font-size: 0.7em; 
+    }
+    .footer-heading {
+        font-size: 1.4em;
+    }
 }
