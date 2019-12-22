@@ -267,6 +267,20 @@ footer .cr {
     right: 15px;
     left: auto;
   }
+  .blog-heading {
+    font-size: 1.5em;
+  }
+  .blog-text {
+    font-size: 0.8em;
+  }
+  .blog {
+    flex: 0.9;
+  }
+  header,
+  footer,
+  main {
+    margin: 0 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
