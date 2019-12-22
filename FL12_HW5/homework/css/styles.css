@@ -135,7 +135,7 @@ nav a:hover {
   margin-bottom: 0;
 }
 .post-article {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   max-height: 340px;
@@ -154,6 +154,7 @@ nav a:hover {
 .post-description {
   width: 50.3%;
   padding: 40px;
+  position: relative;
 }
 .post-description:hover,
 .post-img-container:hover {
@@ -262,8 +263,17 @@ footer .cr {
     padding-left: 40px;
     padding-right: 70px;
   }
+  .post-article:nth-child(even) .post-date {
+    right: 15px;
+    left: auto;
+  }
 }
 
 @media screen and (max-width: 480px) {
-
+  .articles {
+    flex-direction: column;
+  }
+  .posts {
+    margin-right: 0;
+  }
 }
