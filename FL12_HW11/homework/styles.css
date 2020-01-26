@@ -1,0 +1,46 @@
+#root > ul {
+    padding: 0;
+}
+.folder {
+    padding-left: 15px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.folder > * {
+    display: none;
+}
+li , .empty-folder {
+    padding-left: 15px;
+}
+.element:hover {
+    background-color: #efefef;
+}
+.icon-folder {
+    color: #edbc0b;
+}
+.icon-file {
+    color: #bbbbbb;
+}
+.element {
+    display: flex;
+    margin: 0;
+    font-size: 18px;
+}
+.element {
+    cursor: pointer;
+}
+.element i {
+    padding-right: 3px;
+    font-size: 20px;
+    vertical-align: bottom;
+}
+.folder.remove > * {
+    display: block;
+}
+.empty-folder {
+    font-style: italic;
+    font-size: 18px;
+    margin: 0;;
+}
