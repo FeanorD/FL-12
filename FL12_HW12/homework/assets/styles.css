@@ -7,9 +7,9 @@ body {
     padding: 20px 40px;
     display: flex;
     flex-direction: row-reverse;
+    background-color: #24292e;
 }
 .main-page {
-    
     background-color: #24292e;
 }
 .add-set-button {
