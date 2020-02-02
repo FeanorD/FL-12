@@ -1,18 +1,18 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
 }
-.main-page,
-.add-set-page,
-.modify-set-page {
+.main-page-nav,
+.add-page-nav,
+.modify-page-nav {
     padding: 20px 40px;
     display: flex;
     flex-direction: row-reverse;
     background-color: #24292e;
 }
-.main-page {
-    background-color: #24292e;
-}
-.add-set-button {
+.head-button {
     border-radius: 20px;
     padding: 10px 35px;
     background-color: #fff; 
@@ -23,4 +23,67 @@ button {
 }
 button:hover {
     background-color: #d9d9d9;
+}
+.add-page-nav, .modify-page-nav {
+    flex-direction: row;
+}
+.add-page-nav > *,
+.modify-page-nav > * {
+    margin: 0 15px;
+}
+input[type=text] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    transition: 0.4s ease;
+}
+.set-name-input,
+.set-edit-input {
+    flex-grow: 3;
+    color: #fff;
+}
+.term-list .term-name-input,
+.term-list .definition-input,
+.term-list-edit .term-name-input,
+.term-list-edit .definition-input {
+    flex-grow: 3;
+    border-color: #24292e;
+    margin-right: 15px;
+}
+.remove-term,
+.remove-set,
+.edit-set {
+    border: 1px solid #24292e;
+    background: transparent;
+    padding: 8px 20px;
+    color: #24292e;
+    flex-grow: 1;
+}
+.set-list, .term-list, .term-list-edit {
+    padding: 0;
+    list-style-type: none;
+    width: 80%;
+    margin: 0 auto;
+}
+.term-item, .set-item {
+    margin-top: 15px;
+    display: flex;
+    padding: 20px;
+    border: 1px solid #24292e;
+    align-items: center;
+}
+.set-name,
+.studied,
+.edit-set {
+    margin-right: 15px;
+}
+.set-name {
+    flex-grow: 4;
+    color: #24292e;
+}
+.studied {
+    flex-grow: 0.5;
+    width: 30px;
+    height: 30px;
 }
