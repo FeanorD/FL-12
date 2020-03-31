@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -15,7 +15,8 @@
         <header>
             <div class="menu">
                 <p class="menu-heading">Front-end lab</p>
-                <nav>
+                <button class="menu-button hamburger"><span></span></button>
+                <nav id="navbar">
                     <a href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Gallery</a>
@@ -26,15 +27,15 @@
                 <div class="hero-bgcolor">
                     <div class="hero-wrap">
                         <h1 class="hero-heading">Hello! This is Front-end Lab.</h1>
-                        <p class="hero-text">EPAM Front-end Lab</p>
+                        <p class="hero-text">Front-end Lab</p>
                         <button class="button discover-button">
-                            Discover more
+                            <a href="#main">Discover more</a>
                         </button>
                     </div>
                 </div>
             </div>
         </header>
-        <main>
+        <main id="main">
             <article class="art">
                 <img src="img/blog-image1.jpg" alt="blog-image1" class="art-img">
                 <h3 class="art-heading">We Help You To Make Front-end Great Again</h3>
@@ -102,9 +103,9 @@
         </main>
         <footer>
             <div class="footer-info">
-                <h3 class="footer-heading">EPAM LAB</h3>
+                <h3 class="footer-heading">LAB</h3>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                <p class="copy">Copyright © 2019 EPAM</p>
+                <p class="copy">Copyright © 2019 LAB</p>
             </div>
             <div class="footer-contact">
                 <h3 class="footer-heading">Talk to us</h3>
@@ -113,5 +114,7 @@
                 <p>info@company.com</p>
             </div>
         </footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>

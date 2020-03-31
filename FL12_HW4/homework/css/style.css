@@ -44,6 +44,54 @@ nav a:hover {
     font-weight: 700;
     letter-spacing: 0.26em;
 }
+.menu-button {
+    display: none;
+
+    align-items: center;
+
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    position: relative;
+    
+    z-index: 12;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.menu-button:active,
+.menu-button:focus {
+    border: none;
+    outline: none;
+}
+.menu-button > span,
+.menu-button > span::after,
+.menu-button > span::before {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #555555;
+}
+.menu-button > span::after {
+    content: '';
+    top: 8px;
+}
+.menu-button > span::before {
+    content: '';
+    top: -8px;
+}
+.button-close > span {
+    transform: rotate(45deg);
+}
+.button-close > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+.button-close > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
 .hero-container {
     position: relative;
     background: url('../img/home-bg.jpg') no-repeat top / cover;
@@ -59,9 +107,10 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 .hero-heading {
-    margin-top: 20%;
     color: #fff;
     font-size: 3.7em;
     font-weight: 800;
@@ -80,6 +129,12 @@ nav a:hover {
     padding: 12px 23px;
     font-weight: 700;
     color: #555555;
+    outline: none;
+}
+button a {
+    text-decoration: none;
+    color: inherit;
+    transition: ease 1s;
 }
 .discover-button {
     border: 0;
@@ -134,7 +189,6 @@ nav a:hover {
 
 footer {
     display: flex;
-    /* justify-content: center; */
     justify-content: space-between;
     padding: 100px 310px;
     width: 100%;
@@ -172,5 +226,104 @@ footer p {
     }
     .footer-heading {
         font-size: 1.4em;
+    }
+}
+
+@media (max-width: 900px) {
+    main, footer {
+        padding: 50px 40px;
+    }
+    .menu {
+        padding: 30px 60px;
+    }
+    .hero-heading {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        z-index: 11;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        top: 0;
+        left: 0;
+    }
+    nav a {
+        margin: 0;
+        font-size: 1.5em;
+    }
+    .menu-button {
+        display: flex;
+    
+    }
+    .hero-heading {
+        font-size: 2.1em;
+    }
+    .art-heading {
+        font-size: 1.2em;
+    }
+    .art p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-heading {
+        font-size: 1.7em;
+    }
+    .hero-text {
+        font-size: 0.6em;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .art-heading {
+        font-size: 1em;
+    }
+    .art p {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-heading {
+        font-size: 1.2em;
+    }
+    main, footer {
+        padding: 30px 20px;
+    }
+    .menu {
+        padding: 30px 25px;
+    }
+    .menu-heading {
+        font-size: 0.8em;
+    }
+    .art-heading {
+        font-size: 0.8em;
+    }
+    .art p {
+        font-size: 0.6em;
+    }
+    .footer-heading {
+        font-size: 1em;
+    }
+    .art-info p {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-heading {
+        font-size: 1em;
+    }
+    .hero-text {
+        font-size: 0.55sem;
     }
 }
