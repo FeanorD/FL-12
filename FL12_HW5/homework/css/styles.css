@@ -1,15 +1,7 @@
-/* :root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-} */
-
 body {
   font-family: roboto;
   background: #0b192f;
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
   outline: 0;
 }
@@ -135,7 +127,6 @@ nav a:hover {
   margin-bottom: 0;
 }
 .post-article {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   max-height: 340px;
@@ -210,6 +201,47 @@ footer .cr {
   white-space: pre;  
 }
 
+@media screen and (max-width: 1220px) {
+  .post-heading {
+    font-size: 2em;
+  }
+  .post-text {
+    font-size: 0.8em;
+  }
+  .post-date {
+    font-size: 2.8em;
+  }
+  .post-date span {
+    font-size: 0.5em;
+  }
+  .blog-heading {
+    font-size: 1.5em;
+  }
+  .blog-text {
+    font-size: 0.8em;
+  }
+  .post-description,
+  .blog-description {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .post-heading {
+    font-size: 1.5em;
+  }
+  .post-text,
+  .blog-text {
+    font-size: 0.75em;
+  }
+  .story-heading {
+    font-size: 2.3em;
+  }
+  .story-text {
+    font-size: 0.8em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   footer {
     padding: 30px;
@@ -260,7 +292,7 @@ footer .cr {
   }
   .post-article:nth-child(even) .post-description {
     text-align: left;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 70px;
   }
   .post-article:nth-child(even) .post-date {
@@ -268,18 +300,26 @@ footer .cr {
     left: auto;
   }
   .blog-heading {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .blog-text {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   .blog {
     flex: 0.9;
   }
-  header,
-  footer,
-  main {
-    margin: 0 10px;
+  .blog-description {
+    padding: 25px;
+  }
+  .story-article {
+    margin-top: 15px;
+    padding: 40px 30px;
+  }
+  .posts {
+    margin-right: 15px;
+  }
+  .blog-article {
+    margin-bottom: 15px;
   }
 }
 
