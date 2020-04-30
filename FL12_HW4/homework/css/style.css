@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 header {
-    min-height: 100vh;
+/*     min-height: 100vh; */
 }
 main {
     padding: 110px 310px;
@@ -96,6 +96,7 @@ nav a:hover {
     position: relative;
     background: url('../img/home-bg.jpg') no-repeat top / cover;
     height: 100vh;
+    max-height: 1366px;
     margin-top: 11vh;
 }
 .hero-bgcolor {
